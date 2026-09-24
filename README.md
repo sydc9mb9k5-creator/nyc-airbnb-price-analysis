@@ -149,6 +149,18 @@ Games-Howell 사후검정에서는 Manhattan과 다른 자치구 사이의 가�
 - **Queens**: 상대적으로 효율적인 수요 구조를 가진 시장
 - **Bronx / Staten Island**: 상대적으로 낮은 성과를 보이는 시장
 
+### Value Score Visualization
+
+가격과 점유율을 함께 고려한 **Value Score**를 활용해  
+숙소의 상대적 가격 경쟁력과 운영 성과를 비교했습니다.
+
+![NYC Airbnb Value Score Distribution](images/nyc_value_score_distribution.png)
+
+Value Score 기준을 바탕으로 숙소를 구분하고  
+운영 목적에 따라 비교할 수 있도록 그룹 기준을 정리했습니다.
+
+![NYC Airbnb Value Score Criteria](images/nyc_value_score_criteria.png)
+
 ---
 
 ### 4. Host & Listing Characteristics
@@ -174,7 +186,10 @@ Games-Howell 사후검정에서는 Manhattan과 다른 자치구 사이의 가�
 ### Random Forest
 
 - Train R²: **0.821**
-- Test R²: **0.759**
+- Test R²: **0.759** *(initial project result)*
+
+> 프로젝트 발표 당시의 초기 모델 결과이며, 이후 검토 과정에서  
+> 일부 변수의 타깃 누수 가능성을 확인해 최종 성능으로 단정하지 않았습니다.
 
 Random Forest 모델에서 주요 가격 영향 변수로는 다음과 같은 요소가 확인되었습니다.
 
@@ -220,7 +235,7 @@ Random Forest 모델에서 주요 가격 영향 변수로는 다음과 같은 �
 
 ### `images/`
 
-README에 사용할 프로젝트 결과 시각화 이미지를 저장하는 폴더입니다.
+Value Score 분포 및 그룹 기준 시각화 이미지를 저장한 폴더입니다.
 
 ---
 
@@ -258,7 +273,8 @@ nyc-airbnb-price-analysis/
 │   └── jaehee_analysis.ipynb
 │
 └── images/
-    └── .gitkeep
+    ├── nyc_value_score_distribution.png
+    └── nyc_value_score_criteria.png
 ```
 
 ---
